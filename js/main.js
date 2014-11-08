@@ -62,12 +62,80 @@ gc.portfolioImages = [
 					{name:"Moose at Mountain Stream", 
 						thumb:"img/art/thumbs/moose_at_mountain_stream.jpg", 
 						src:"img/art/moose_at_mountain_stream.jpg"},
+					{name:"Bull Moose",
+						thumb:"img/art/thumbs/Bull_Moose.jpg",
+						src:"img/art/Bull_Moose.jpg"
+						},
+					{name:"He's Too Big",
+						thumb:"img/art/thumbs/Hes_Too_Big.jpg",
+						src:"img/art/Hes_Too_Big.jpg"
+						},
+					{name:"King of Beasts",
+						thumb:"img/art/thumbs/King_of_Beasts.jpg",
+						src:"img/art/King_of_Beasts.jpg"
+						},
+					{name:"Lions 2",
+						thumb:"img/art/thumbs/lions2.jpg",
+						src:"img/art/lions2.jpg"
+						},
+					{name:"Maroon Bells Stream",
+						thumb:"img/art/thumbs/Maroon_Bells_Stream.jpg",
+						src:"img/art/Maroon_Bells_Stream.jpg"
+						},
+					{name:"Moose at Falls",
+						thumb:"img/art/thumbs/Moose_at_Falls.jpg",
+						src:"img/art/Moose_at_Falls.jpg"
+						},
+					{name:"Moose at Night Falls 2",
+						thumb:"img/art/thumbs/Moose_at_Night_Falls2.jpg",
+						src:"img/art/Moose_at_Night_Falls2.jpg"
+						},
+					{name:"Moose in Shadows",
+						thumb:"img/art/thumbs/Moose_in_Shadows.jpg",
+						src:"img/art/Moose_in_Shadows.jpg"
+						},
+					{name:"Mountain Falls",
+						thumb:"img/art/thumbs/Mountain_Falls.jpg",
+						src:"img/art/Mountain_Falls.jpg"
+						},
+					{name:"Mountain Lake",
+						thumb:"img/art/thumbs/Mountain_Lake.jpg",
+						src:"img/art/Mountain_Lake.jpg"
+						},
+					{name:"Mountain Moose",
+						thumb:"img/art/thumbs/Mountain_Moose.jpg",
+						src:"img/art/Mountain_Moose.jpg"
+						},
+					{name:"Night Moose",
+						thumb:"img/art/thumbs/Night_Moose.jpg",
+						src:"img/art/Night_Moose.jpg"
+						},
+					{name:"Oryx 2",
+						thumb:"img/art/thumbs/oryx2.jpg",
+						src:"img/art/oryx2.jpg"
+						},
+					{name:"Rocky Mountain Elk",
+						thumb:"img/art/thumbs/Rocky_Mountain_Elk.jpg",
+						src:"img/art/Rocky_Mountain_Elk.jpg"
+						},
+					{name:"Rocky Mountain Afternoon",
+						thumb:"img/art/thumbs/Rocky_Mtn_Afternoon.jpg",
+						src:"img/art/Rocky_Mtn_Afternoon.jpg"
+						},
+					{name:"Summer Falls",
+						thumb:"img/art/thumbs/Summer_Falls.jpg",
+						src:"img/art/Summer_Falls.jpg"
+						},
+					{name:"To Maroon Bells",
+						thumb:"img/art/thumbs/To_Maroon_Bells.jpg",
+						src:"img/art/To_Maroon_Bells.jpg"
+						},
 					{name:"Apple Pie",
 						thumb:"img/art/thumbs/apple_pie.jpg",
 						src:"img/art/apple_pie.jpg"
 						},
 					{name:"Autumn Birches",
-						thumb:"img/art/thumbs/autum_birches.jpg",
+						thumb:"img/art/thumbs/autumn_birches.jpg",
 						src:"img/art/autumn_birches.jpg"
 						},
 					{name:"Autumn River",
