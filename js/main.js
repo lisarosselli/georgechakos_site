@@ -61,13 +61,107 @@ gc.portfolioImages = [
 						src:"img/art/moose_at_big_falls.jpg"},
 					{name:"Moose at Mountain Stream", 
 						thumb:"img/art/thumbs/moose_at_mountain_stream.jpg", 
-						src:"img/art/moose_at_mountain_stream.jpg"}
+						src:"img/art/moose_at_mountain_stream.jpg"},
+					{name:"Apple Pie",
+						thumb:"img/art/thumbs/apple_pie.jpg",
+						src:"img/art/apple_pie.jpg"
+						},
+					{name:"Autumn Birches",
+						thumb:"img/art/thumbs/autum_birches.jpg",
+						src:"img/art/autumn_birches.jpg"
+						},
+					{name:"Autumn River",
+						thumb:"img/art/thumbs/autumn_river.jpg",
+						src:"img/art/autumn_river.jpg"
+						},
+					{name:"Beaver River",
+						thumb:"img/art/thumbs/beaver_river.jpg",
+						src:"img/art/beaver_river.jpg"
+						},
+					{name:"Fall Colors",
+						thumb:"img/art/thumbs/fall_colors.jpg",
+						src:"img/art/fall_colors.jpg"
+						},
+					{name:"m001",
+						thumb:"img/art/thumbs/m001.jpg",
+						src:"img/art/m001.jpg"
+						},
+					{name:"m002",
+						thumb:"img/art/thumbs/m002.jpg",
+						src:"img/art/m002.jpg"
+						},
+					{name:"m003",
+						thumb:"img/art/thumbs/m003.jpg",
+						src:"img/art/m003.jpg"
+						},
+					{name:"m004",
+						thumb:"img/art/thumbs/m004.jpg",
+						src:"img/art/m004.jpg"
+						},
+					{name:"m005",
+						thumb:"img/art/thumbs/m005.jpg",
+						src:"img/art/m005.jpg"
+						},
+					{name:"m006",
+						thumb:"img/art/thumbs/m006.jpg",
+						src:"img/art/m006.jpg"
+						},
+					{name:"m007",
+						thumb:"img/art/thumbs/m007.jpg",
+						src:"img/art/m007.jpg"
+						},
+					{name:"m009",
+						thumb:"img/art/thumbs/m009.jpg",
+						src:"img/art/m009.jpg"
+						},
+					{name:"m010",
+						thumb:"img/art/thumbs/m010.jpg",
+						src:"img/art/m010.jpg"
+						},
+					{name:"m011",
+						thumb:"img/art/thumbs/m011.jpg",
+						src:"img/art/m011.jpg"
+						},
+					{name:"Michigan River",
+						thumb:"img/art/thumbs/michigan_river.jpg",
+						src:"img/art/michigan_river.jpg"
+						},
+					{name:"New York Winter",
+						thumb:"img/art/thumbs/new_york_winter.jpg",
+						src:"img/art/new_york_winter.jpg"
+						},
+					{name:"Red Table",
+						thumb:"img/art/thumbs/red_table.jpg",
+						src:"img/art/red_table.jpg"
+						},
+					{name:"Shadow Patterns",
+						thumb:"img/art/thumbs/shadow_patterns.jpg",
+						src:"img/art/shadow_patterns.jpg"
+						},
+					{name:"Spring Falls",
+						thumb:"img/art/thumbs/spring_falls.jpg",
+						src:"img/art/spring_falls.jpg"
+						},
+					{name:"Spring Shadows",
+						thumb:"img/art/thumbs/spring_shadows.jpg",
+						src:"img/art/spring_shadows.jpg"
+						},
+					{name:"Steam Engine",
+						thumb:"img/art/thumbs/steam_engine.jpg",
+						src:"img/art/steam_engine.jpg"
+						},
+					{name:"Winter Forest",
+						thumb:"img/art/thumbs/winter_forest.jpg",
+						src:"img/art/winter_forest.jpg"
+						}
 				];
 
-gc.modalViewable 	= false;
-gc.modalContentObj 	= null;
-gc.modal 			= document.getElementById("modal");
-gc.innerModal 		= document.getElementById("innerModal");
+				/*
+					{name:"",
+						thumb:"img/art/thumbs/.jpg",
+						src:"img/art/.jpg"
+						},
+				*/
 
 
 function testHandler(event, data) {
