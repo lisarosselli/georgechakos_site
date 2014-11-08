@@ -1,0 +1,99 @@
+.th_bounding {
+	float:left;
+	background-color: #ccc;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	outline: 1px solid #fff;
+	margin: 2% 1.5%;
+	min-height: 100px;
+	max-height: 150px;
+	width:30.333%;
+	overflow: hidden;
+}
+
+#modal {
+	background-color: #fff;
+	position: absolute;
+	left:0;
+	top:0;
+	opacity: 1;
+	height: 100%;
+	width: 100%;
+	z-index:100;
+}
+
+.show {
+	visibility: visible;
+}
+
+.hide {
+	visibility: hidden;
+}
+
+#innerModal {
+	position: relative;
+	left: 10%;
+	top: 10%;
+	width: 80%;
+	height: 80%;
+	opacity: 2;
+	background: url('../img/spinner.gif') black 50% 50% no-repeat;
+	overflow: hidden;
+}
+
+#innerModal img {
+	width: 100% !important;
+	height: auto;
+}
+
+/* desktop */
+@media(min-width:767px) {
+    .th_bounding {
+    	background-color: blue;
+    	min-height: 200px;
+    }
+}
+
+/* tablet */
+@media(max-width:1199px) {
+    .th_bounding {
+    	background-color: red;
+    	min-height: 120px;
+    	max-height: 120px;
+    }
+
+    #innerModal {
+    	left: 0;
+    	top: 0;
+    	min-width: 100%;
+    	min-height: 100%;
+    	position: absolute;
+    	background-color: red;
+    }
+}
+
+/* mobile */
+@media(max-width:500px) {
+	.th_bounding {
+		background-color: purple;
+		min-height: 80px;
+		max-height: 90px;
+		height: 50px;
+	}
+
+	#innerModal {
+    	left: 0;
+    	top: 0;
+    	min-width: 100%;
+    	min-height: 100%;
+    	position: absolute;
+    	background-color: blue;
+    }
+}
+
+.modal-dialog {
+	width: 95%;
+}
+.modal-content {
+	height: 95%;
+}
