@@ -11,12 +11,10 @@ requirejs.config({
 		'jquery.lazyload': ['jquery'],
 		'grayscale': ['jquery', 'jquery.easing.min', 'jquery.lazyload'],
 		'main': ['underscore', 'backbone-min', 'jquery'],
+		'bootstrap': ['jquery'],
 		'backbone-min': {
 			deps: ['underscore', 'jquery'],
 			exports: 'Backbone'
-		},
-		'bootstrap': {
-			deps: ['jquery']
 		},
 		'underscore': {
 			deps: ['jquery'],
