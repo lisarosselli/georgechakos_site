@@ -94,6 +94,20 @@
 .modal-dialog {
 	width: 95%;
 }
+
+.modal-title {
+	color: #000;
+}
+
 .modal-content {
 	height: 95%;
+}
+
+.feature-image {
+	width: 100%;
+	height: auto;
+}
+
+#featured-art {
+	background: url('../img/spinner.gif') 32px 32px no-repeat center center;
 }

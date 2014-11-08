@@ -9,7 +9,7 @@ var ModalModel = Backbone.Model.extend({
 			console.log('ModalModel general change');
 		});
 
-		this.on("change:artObj", showHideModal)
+		this.on("change:artObj", showHideModal);
 	},
 	defaults: {
 		artObj: null,
@@ -27,23 +27,18 @@ function showHideModal() {
 	console.log("showHideModal "+gc.modal);
 
 	if (modal.get('artObj') === null || !_.isObject(modal.get('artObj'))) {
-		console.log("artObj is null!");
-		
-		$(gc.modal).removeClass('show');
-		$(gc.modal).addClass('hide');
-
-		gc.innerModal.innerHTML = "";
+		//console.log("artObj is null!");
+		$('#art-title').text('');
+		$('#featured-art').html("<!-- featured art goes here -->");
+		$('#myModal').modal('toggle');
 
 	} else {
-		console.log("artObj has value "+modal.get('artObj').src);
-		$(gc.modal).removeClass('hide');
-		$(gc.modal).addClass('show');
-		var topOffset = $(window).scrollTop();
-		$(gc.modal).offset({top:topOffset}); //$(window).scrollTop();
-
-
-		gc.innerModal.innerHTML = "<img src='" + modal.get('artObj').src + "'>"
+		//console.log("artObj has value "+modal.get('artObj').src);
+		$('#art-title').text(modal.get('artObj').name);
+		$('#featured-art').html("<img class='feature-image' src='"+ modal.get('artObj').src +"'>");
+		$('#myModal').modal('toggle');
 	}
+	
 }
 
 
