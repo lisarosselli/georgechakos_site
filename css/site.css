@@ -1,3 +1,27 @@
+body {
+	background-color: #1c1f32;
+}
+
+.content-section {
+	padding-top: 150px;
+}
+
+.quoteleft {
+	position: absolute;
+	font-size: 12em;
+	font-weight: 100;
+	opacity: 0.1;
+}
+
+.quoteright {
+	float: right;
+	font-size: 12em;
+}
+
+#galleryheader {
+	padding-top: 150px;
+}
+
 .th_bounding {
 	float:left;
 	background-color: #ccc;
