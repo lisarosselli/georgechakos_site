@@ -54,7 +54,8 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #11505d;
+    color: #1ED2F7;
+    cursor: pointer;
 }
 
 .light {
@@ -166,11 +167,12 @@ a:focus {
     }
 
     .intro .intro-body .brand-heading {
-        font-size: 100px;
+        font-size: 5em;
     }
 
     .intro .intro-body .intro-text {
-        font-size: 25px;
+        font-size: 2.2em;
+        text-shadow: #000 1px 1px;
     }
 }
 
@@ -256,7 +258,7 @@ a:focus {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background: url(../img/gc-downloads-bg.jpg) no-repeat center center scroll;
+    /*background: url(../img/gc-downloads-bg.jpg) no-repeat center center scroll;*/
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
