@@ -1,51 +1,7 @@
 console.log("main!");
 
-
-var ModalModel = Backbone.Model.extend({
-	initialize: function() {
-		console.log("new modalModel");
-
-		this.on("change", function() {
-			console.log('ModalModel general change');
-		});
-
-		this.on("change:artObj", showHideModal);
-	},
-	defaults: {
-		artObj: null,
-		viewing: false
-	}
-
-});
-
-var modal = new ModalModel();
-
-// see this: http://getbootstrap.com/javascript/#modals
-
-
-function showHideModal() {
-	console.log("showHideModal "+gc.modal);
-
-	if (modal.get('artObj') === null || !_.isObject(modal.get('artObj'))) {
-		//console.log("artObj is null!");
-		$('#art-title').text('');
-		$('#featured-art').html("<!-- featured art goes here -->");
-		$('#myModal').modal('toggle');
-
-	} else {
-		//console.log("artObj has value "+modal.get('artObj').src);
-		$('#art-title').text(modal.get('artObj').name);
-		$('#featured-art').html("<img class='feature-image' src='"+ modal.get('artObj').src +"'>");
-		$('#myModal').modal('toggle');
-	}
-	
-}
-
-
-
 /* Main object */
 var gc = {};
-
 gc.portfolioImages = [
 					{name:"A Challenge", 
 						thumb:"img/art/thumbs/a_challenge.jpg", 
@@ -232,8 +188,62 @@ gc.portfolioImages = [
 				*/
 
 
-function testHandler(event, data) {
-	console.log("testHandler");
+var ModalModel = Backbone.Model.extend({
+	initialize: function() {
+		console.log("new modalModel");
+
+		this.on("change", function() {
+			console.log('ModalModel general change');
+		});
+
+		this.on("change:artObj", showHideModal);
+	},
+	defaults: {
+		artObj: null,
+		viewing: false
+	}
+});
+
+var GalleryModel = Backbone.Model.extend({
+	initialize: function() {
+		console.log("new GalleryModel");
+
+		this.on("change", function() {
+			console.log("GalleryModel general change");
+		});
+	},
+	defaults: {
+		galleryArray: ['g1', 'g2', 'g3', 'g4', 'g5'],
+		selectedGallery: null
+	}
+});
+
+var modal = new ModalModel();
+
+// see this: http://getbootstrap.com/javascript/#modals
+
+
+function showHideModal() {
+	console.log("showHideModal "+gc.modal);
+
+	if (modal.get('artObj') === null || !_.isObject(modal.get('artObj'))) {
+		//console.log("artObj is null!");
+		$('#art-title').text('');
+		$('#featured-art').html("<!-- featured art goes here -->");
+		$('#myModal').modal('toggle');
+
+	} else {
+		//console.log("artObj has value "+modal.get('artObj').src);
+		$('#art-title').text(modal.get('artObj').name);
+		$('#featured-art').html("<img class='feature-image' src='"+ modal.get('artObj').src +"'>");
+		$('#myModal').modal('toggle');
+	}
+	
+}
+
+
+function sparkModal(event, data) {
+	console.log("sparkModal");
 	modal.set('artObj', event.data);
 }
 
@@ -257,17 +267,17 @@ function createGallery(imagesArray, targetContainer) {
 
 /*	Once the gallery thumbnails exist, bind each
  *	thumbnail to the click event while passing
- *	through the image data object.
+ *	them their image data object.
  */
 function bindModalEvents(imagesArray) {
 	console.log("bindModalEvents");
 
 	for (var i = 0; i < imagesArray.length; i++) {
 		var classId = "div.item" + i;
-		$(classId).on("click", imagesArray[i], testHandler);
+		$(classId).on("click", imagesArray[i], sparkModal);
 	}
 
-	$(gc.innerModal).on("click", null, testHandler);
+	$(gc.innerModal).on("click", null, sparkModal);
 }    
 
 function showModal(value) {

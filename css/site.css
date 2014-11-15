@@ -74,6 +74,18 @@ a {
 	height: auto;
 }
 
+#galleryLabels {
+
+}
+
+.glink {
+	background-color: green;
+	cursor: pointer;
+	display: inline;
+	list-style: none;
+	padding: 10px 30px;
+}
+
 /* desktop */
 @media(min-width:767px) {
     .th_bounding {
