@@ -19,7 +19,8 @@ body {
 }
 
 #galleryheader {
-	padding-top: 150px;
+	margin-bottom: 50px;
+	width: 96%;
 }
 
 a {
@@ -74,16 +75,27 @@ a {
 	height: auto;
 }
 
-#galleryLabels {
-
+#gs {
+	width: 100%;
+	margin-bottom: 100px;
 }
 
 .glink {
-	background-color: green;
+	background: rgba(65, 65, 65, .8);	
 	cursor: pointer;
 	display: inline;
+	float: left;
+	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 	list-style: none;
-	padding: 10px 30px;
+	margin-right: 3px;
+	padding: 1em 2em;
+	width: 32.3333%;
+}
+
+.newGallery {
+	background-color: blue;
+	height: auto;
+	width: auto;
 }
 
 /* desktop */

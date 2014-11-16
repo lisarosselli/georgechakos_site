@@ -2,6 +2,60 @@ console.log("main!");
 
 /* Main object */
 var gc = {};
+
+gc.g0 = {
+		name: "Western",
+		images: [
+			{name:"A Challenge", 
+				thumb:"img/art/thumbs/a_challenge.jpg", 
+				src:"img/art/a_challenge.jpg"},
+			{name:"Cowboys at Maroon Bells", 
+				thumb:"img/art/thumbs/cowboys_at_maroon_bells.jpg", 
+				src:"img/art/cowboys_at_maroon_bells.jpg"},
+			{name:"Elk in Shadows", 
+				thumb:"img/art/thumbs/elk_in_shadows.jpg", 
+				src:"img/art/elk_in_shadows.jpg"},
+			{name:"Moose at Big Falls", 
+					thumb:"img/art/thumbs/moose_at_big_falls.jpg", 
+					src:"img/art/moose_at_big_falls.jpg"},
+			{name:"Moose at Mountain Stream", 
+				thumb:"img/art/thumbs/moose_at_mountain_stream.jpg", 
+				src:"img/art/moose_at_mountain_stream.jpg"},
+			{name:"Bull Moose",
+				thumb:"img/art/thumbs/Bull_Moose.jpg",
+				src:"img/art/Bull_Moose.jpg"
+				},
+			{name:"He's Too Big",
+				thumb:"img/art/thumbs/Hes_Too_Big.jpg",
+				src:"img/art/Hes_Too_Big.jpg"
+				}
+		]
+};
+
+gc.g1 = {
+		name: "Midwest",
+		images: [
+			{name:"Cowboys at Maroon Bells", 
+				thumb:"img/art/thumbs/cowboys_at_maroon_bells.jpg", 
+				src:"img/art/cowboys_at_maroon_bells.jpg"}
+		]
+};
+
+gc.g2 = {
+		name: "Other",
+		images: [
+			{name:"Cowboys at Maroon Bells", 
+				thumb:"img/art/thumbs/cowboys_at_maroon_bells.jpg", 
+				src:"img/art/cowboys_at_maroon_bells.jpg"}
+		]
+};
+
+gc.galleries = [
+			{galObj: gc.g0, galClass: ".g0"},
+			{galObj: gc.g1, galClass: ".g1"}
+		];
+
+
 gc.portfolioImages = [
 					{name:"A Challenge", 
 						thumb:"img/art/thumbs/a_challenge.jpg", 
@@ -231,24 +285,23 @@ function showHideModal() {
 		$('#art-title').text('');
 		$('#featured-art').html("<!-- featured art goes here -->");
 		$('#myModal').modal('toggle');
-
 	} else {
 		//console.log("artObj has value "+modal.get('artObj').src);
 		$('#art-title').text(modal.get('artObj').name);
 		$('#featured-art').html("<img class='feature-image' src='"+ modal.get('artObj').src +"'>");
 		$('#myModal').modal('toggle');
 	}
-	
 }
 
 
-function sparkModal(event, data) {
+function sparkModal(event) {
 	console.log("sparkModal");
 	modal.set('artObj', event.data);
 }
 
-/*	Create the main thumbnail gallery, prepping the 
- *	data-original attribute for lazy load image source.
+/*	Creating/placing the gallery images:
+ *	Create the main thumbnail gallery, prepping the data-original
+ *	attribute for lazy load image source.
  */
 function createGallery(imagesArray, targetContainer) {
 	console.log("createGallery");
@@ -263,11 +316,37 @@ function createGallery(imagesArray, targetContainer) {
 	}
 
 	targetContainer.innerHTML = htmlInjectionString;
+	bindLazyLoad();
 }
 
-/*	Once the gallery thumbnails exist, bind each
- *	thumbnail to the click event while passing
- *	them their image data object.
+function populateGallery(event) {
+	console.log("populateGallery with "+event.data);
+
+	var a = event.data.galObj.images;
+	var htmlInjectionString = "<h2>"+event.data.galObj.name+"</h2>";
+	var b = 0;
+
+	_.each(a, function(a, b) {
+		console.log(b);
+		htmlInjectionString += "<div class='th_bounding item"+ b +"'>" + 
+			"<img class='lazy' index='"+ b +"' data-original='"+ 
+			a.thumb +"'>" + "</div>";
+	});
+
+	document.getElementById('newGallery').innerHTML = htmlInjectionString;
+	bindLazyLoad();
+
+	b = 0;
+	_.each(a, function(a, b) {
+		var classId = "div.item" + b;
+		$(classId).on("click", a, sparkModal);
+	});
+
+}
+
+/*	Image event-binding:
+ * 	Once the gallery thumbnails exist, bind each thumbnail to the 
+ *	click event while passing them their image data object.
  */
 function bindModalEvents(imagesArray) {
 	console.log("bindModalEvents");
@@ -278,22 +357,26 @@ function bindModalEvents(imagesArray) {
 	}
 
 	$(gc.innerModal).on("click", null, sparkModal);
-}    
+}  
 
-function showModal(value) {
-	console.log("showModal with "+value);
-}
+/*	Dynamic gallery image binding
+ */
+function bindGallerySelection() {
+	_.each(gc.galleries, function(obj) {
+		console.log(obj);
+		$(obj.galClass).on("click", obj, populateGallery);
+	})
+}  
 
-function clearModalContent() {
-	gc.modalContentObj = null;
-}
-
-createGallery(gc.portfolioImages, document.getElementById('gallery'));
-bindModalEvents(gc.portfolioImages);
+//createGallery(gc.portfolioImages, document.getElementById('gallery'));
+//bindModalEvents(gc.portfolioImages);
+bindGallerySelection();
 
 /*  This specifically binds jquery.lazyload.js to each image tag
-     *  that declares the .lazy class
-     */
-    $("img.lazy").lazyload({
-         effect : "fadeIn"
-     });
+ *  that declares the .lazy class
+ */
+function bindLazyLoad() {
+	$("img.lazy").lazyload({
+    	effect : "fadeIn"
+	});
+}
