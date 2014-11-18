@@ -334,7 +334,6 @@ function populateGallery(event) {
 	var b = 0;
 
 	_.each(a, function(a, b) {
-		console.log(b);
 		htmlInjectionString += "<div class='th_bounding item"+ b +"'>" + 
 			"<img class='lazy' index='"+ b +"' data-original='"+ 
 			a.thumb +"'>" + "</div>";
@@ -387,3 +386,8 @@ function bindLazyLoad() {
     	effect : "fadeIn"
 	});
 }
+
+/* By default causing the first gallery,
+ * Rocky Mtn. Art to populate
+ */
+$('.g0').trigger('click');
