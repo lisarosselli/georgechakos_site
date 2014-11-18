@@ -13,6 +13,11 @@ body {
 	opacity: 0.1;
 }
 
+.brand-heading {
+	text-transform: none;
+	font-weight: 400;
+	
+}
 .quoteright {
 	float: right;
 	font-size: 12em;
@@ -57,6 +62,10 @@ a {
 
 .hide {
 	visibility: hidden;
+}
+
+.intro-text {
+	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 #innerModal {
