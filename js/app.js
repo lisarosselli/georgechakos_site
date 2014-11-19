@@ -7,11 +7,10 @@ requirejs.config({
 		main: '../main'
 	},
 	shim: {
-		'jquery.easing.min': ['jquery'],
-		'jquery.lazyload': ['jquery'],
-		'grayscale': ['jquery', 'jquery.easing.min', 'jquery.lazyload'],
-		'main': ['underscore', 'backbone-min', 'jquery'],
-		'bootstrap': ['jquery'],
+		'bootstrap': {
+			deps: ['jquery'],
+			exports: 'Bootstrap'
+		},
 		'backbone-min': {
 			deps: ['underscore', 'jquery'],
 			exports: 'Backbone'
@@ -19,11 +18,19 @@ requirejs.config({
 		'underscore': {
 			deps: ['jquery'],
 			exports: '_'
-		}
+		},
+		'jquery.easing.min': ['jquery'],
+		'jquery.lazyload': ['jquery'],
+		'grayscale': ['jquery', 'jquery.easing.min', 'jquery.lazyload'],
+		'main': ['underscore', 'backbone-min', 'jquery']
 	}
 });
 
-require(['jquery', 'jquery.lazyload', 'bootstrap.min', 'jquery.easing.min', 'underscore', 'backbone-min', 'grayscale', 'main']);
+//require(['jquery', 'jquery.lazyload', 'jquery.easing.min', 'underscore', 'backbone-min', 'bootstrap.min', 'grayscale', 'main']);
+
+require(['jquery', 'jquery.lazyload', 'jquery.easing.min', 'underscore', 'backbone-min', 'grayscale', 'main'], function() {
+	require(['bootstrap.min']);
+});
 
 
 

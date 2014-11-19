@@ -13,13 +13,19 @@ body {
 	opacity: 0.1;
 }
 
+.brand-heading {
+	text-transform: none;
+	font-weight: 400;
+	
+}
 .quoteright {
 	float: right;
 	font-size: 12em;
 }
 
 #galleryheader {
-	padding-top: 150px;
+	margin-bottom: 50px;
+	width: 96%;
 }
 
 a {
@@ -58,6 +64,10 @@ a {
 	visibility: hidden;
 }
 
+.intro-text {
+	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
 #innerModal {
 	position: relative;
 	left: 10%;
@@ -72,6 +82,29 @@ a {
 #innerModal img {
 	width: 100% !important;
 	height: auto;
+}
+
+#gs {
+	width: 100%;
+	margin-bottom: 100px;
+}
+
+.glink {
+	background: rgba(65, 65, 65, .8);	
+	cursor: pointer;
+	display: inline;
+	float: left;
+	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	list-style: none;
+	margin-right: 3px;
+	padding: 1em 2em;
+	width: 32.3333%;
+}
+
+.newGallery {
+	background-color: blue;
+	height: auto;
+	width: auto;
 }
 
 /* desktop */
