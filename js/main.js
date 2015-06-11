@@ -95,6 +95,22 @@ gc.g0 = {
 gc.g1 = {
 		name: "Midwest",
 		images: [
+			{name:"Ivy House",
+				thumb:"img/art/thumbs/ivy_house.jpg",
+				src:"img/art/ivy_house.jpg"
+			},
+			{name:"Ivy House",
+				thumb:"img/art/thumbs/ivy_house.jpg",
+				src:"img/art/ivy_house.jpg"
+			},
+			{name:"Ivy House",
+				thumb:"img/art/thumbs/ivy_house.jpg",
+				src:"img/art/ivy_house.jpg"
+			},
+			{name:"Ivy House",
+				thumb:"img/art/thumbs/ivy_house.jpg",
+				src:"img/art/ivy_house.jpg"
+			},
 			{name:"Autumn Birches",
 				thumb:"img/art/thumbs/autumn_birches.jpg",
 				src:"img/art/autumn_birches.jpg"
@@ -237,7 +253,8 @@ gc.g3 = {
 gc.galleries = [
 			{galObj: gc.g0, galClass: ".g0"},
 			{galObj: gc.g1, galClass: ".g1"},
-			{galObj: gc.g2, galClass: ".g2"}
+			{galObj: gc.g2, galClass: ".g2"},
+			{galObj: gc.g3, galClass: ".g3"}
 		];
 
 
