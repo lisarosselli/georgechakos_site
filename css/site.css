@@ -98,7 +98,11 @@ a {
 	list-style: none;
 	margin-right: 3px;
 	padding: 1em 2em;
-	width: 32.3333%;
+	width: 49.3333%;
+}
+
+.glink:hover {
+	background: green;
 }
 
 .newGallery {
@@ -150,6 +154,11 @@ a {
     	position: absolute;
     	background-color: #000;
     }
+		
+	.glink {
+		width: 100%;
+		margin-top: 5px;
+	}
 }
 
 .modal-dialog {

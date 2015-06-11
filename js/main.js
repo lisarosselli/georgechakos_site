@@ -4,7 +4,7 @@ console.log("main!");
 var gc = {};
 
 gc.g0 = {
-		name: "Rocky Mtn. Art",
+		name: "Western & Wildlife",
 		images: [
 			{name:"Fall River",
 				thumb:"img/art/thumbs/michigan_river.jpg",
@@ -88,6 +88,18 @@ gc.g0 = {
 			{name:"To Maroon Bells",
 				thumb:"img/art/thumbs/To_Maroon_Bells.jpg",
 				src:"img/art/To_Maroon_Bells.jpg"
+				},
+			{name:"King of Beasts",
+				thumb:"img/art/thumbs/King_of_Beasts.jpg",
+				src:"img/art/King_of_Beasts.jpg"
+				},
+			{name:"Lions!",
+				thumb:"img/art/thumbs/lions2.jpg",
+				src:"img/art/lions2.jpg"
+				},
+			{name:"Oryx 2",
+				thumb:"img/art/thumbs/oryx2.jpg",
+				src:"img/art/oryx2.jpg"
 				}
 		]
 };
@@ -99,17 +111,17 @@ gc.g1 = {
 				thumb:"img/art/thumbs/ivy_house.jpg",
 				src:"img/art/ivy_house.jpg"
 			},
-			{name:"Ivy House",
-				thumb:"img/art/thumbs/ivy_house.jpg",
-				src:"img/art/ivy_house.jpg"
+			{name:"Dearborn House",
+				thumb:"img/art/thumbs/dearborn_house.jpg",
+				src:"img/art/dearborn_house.jpg"
 			},
-			{name:"Ivy House",
-				thumb:"img/art/thumbs/ivy_house.jpg",
-				src:"img/art/ivy_house.jpg"
+			{name:"Hawthorne",
+				thumb:"img/art/thumbs/hawthorne.jpg",
+				src:"img/art/hawthorne.jpg"
 			},
-			{name:"Ivy House",
-				thumb:"img/art/thumbs/ivy_house.jpg",
-				src:"img/art/ivy_house.jpg"
+			{name:"House in the Woods",
+				thumb:"img/art/thumbs/houseinwoods.jpg",
+				src:"img/art/houseinwoods.jpg"
 			},
 			{name:"Autumn Birches",
 				thumb:"img/art/thumbs/autumn_birches.jpg",
@@ -154,6 +166,7 @@ gc.g1 = {
 		]
 };
 
+/* Combined into Western & Wildlife
 gc.g2 = {
 		name: "African",
 		images: [
@@ -171,6 +184,7 @@ gc.g2 = {
 				}
 		]
 };
+*/
 
 gc.g3 = {
 	name:"Other",
